@@ -1,0 +1,1062 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Pradeep's Institute of Heavy Equipments — Master the Machines. Build Your Career.</title>
+<meta name="description" content="Kerala's #1 ISO-certified heavy equipment training institute. Hands-on training, 100% placement support, international certifications. Limited seats — book now." />
+
+<!-- Tailwind CDN -->
+<script src="https://cdn.tailwindcss.com"></script>
+
+<!-- Premium Fonts: Editorial + Industrial pairing -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Archivo:wght@400;500;600;700;800;900&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+
+<script>
+  // Tailwind config — extend with brand colors and fonts
+  tailwind.config = {
+    theme: {
+      extend: {
+        colors: {
+          ink:    '#0E0E0F',     // deep black
+          coal:   '#1A1A1C',     // off-black surface
+          bone:   '#F5F1EA',     // warm off-white
+          paper:  '#FAF7F2',     // page bg
+          rust:   '#C2410C',     // accent orange-red
+          amber:  '#FFB800',     // signature yellow
+          gold:   '#F59E0B',     // mid amber
+          steel:  '#3F3F46',     // industrial gray
+        },
+        fontFamily: {
+          display: ['"Bebas Neue"', 'sans-serif'],
+          serif:   ['"Instrument Serif"', 'serif'],
+          sans:    ['Archivo', 'system-ui', 'sans-serif'],
+        },
+      },
+    },
+  };
+</script>
+
+<style>
+  html { scroll-behavior: smooth; }
+  body { font-family: 'Archivo', system-ui, sans-serif; background: #FAF7F2; color: #0E0E0F; -webkit-font-smoothing: antialiased; }
+
+  /* Hide scrollbar for horizontal scroll cards */
+  .no-scrollbar::-webkit-scrollbar { display: none; }
+  .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+
+  /* Diagonal section dividers */
+  .clip-diagonal-tl { clip-path: polygon(0 4%, 100% 0, 100% 100%, 0 96%); }
+  .clip-diagonal-bl { clip-path: polygon(0 0, 100% 4%, 100% 96%, 0 100%); }
+
+  /* Gradient blobs */
+  .blob {
+    position: absolute; border-radius: 50%; filter: blur(70px); opacity: 0.55;
+    pointer-events: none; z-index: 0;
+  }
+
+  /* Grain overlay */
+  .grain::before {
+    content:''; position:absolute; inset:0; pointer-events:none; opacity:.06;
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='120' height='120'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>");
+  }
+
+  /* Marquee */
+  @keyframes marquee {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+  }
+  .marquee-track { animation: marquee 30s linear infinite; }
+
+  /* Reveal animation */
+  .reveal { opacity: 0; transform: translateY(28px); transition: opacity .8s ease, transform .8s cubic-bezier(.2,.7,.2,1); }
+  .reveal.visible { opacity: 1; transform: translateY(0); }
+
+  /* Hero number ticker glow */
+  .stat-num { background: linear-gradient(180deg, #FFB800 0%, #C2410C 100%); -webkit-background-clip: text; background-clip: text; color: transparent; }
+
+  /* Diagonal stripes */
+  .stripes {
+    background-image: repeating-linear-gradient(
+      135deg,
+      #FFB800 0px, #FFB800 18px,
+      #0E0E0F 18px, #0E0E0F 36px
+    );
+  }
+
+  /* Glassmorphism card */
+  .glass {
+    background: rgba(255,255,255,0.65);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+    border: 1px solid rgba(255,255,255,0.5);
+  }
+  .glass-dark {
+    background: rgba(14,14,15,0.55);
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
+    border: 1px solid rgba(255,184,0,0.18);
+  }
+
+  /* Hover lift */
+  .lift { transition: transform .35s cubic-bezier(.2,.7,.2,1), box-shadow .35s ease; }
+  .lift:hover { transform: translateY(-6px); box-shadow: 0 30px 60px -20px rgba(14,14,15,0.25); }
+
+  /* Custom checkbox-look bullet */
+  .tick::before {
+    content:''; display:inline-block; width:18px; height:18px; margin-right:10px;
+    background:#FFB800; border-radius:4px; vertical-align:-3px;
+    box-shadow: inset 0 0 0 2px #0E0E0F;
+  }
+
+  /* Accordion arrow rotate */
+  details[open] summary .acc-icon { transform: rotate(45deg); }
+
+  /* Prevent horizontal scroll from blobs */
+  body { overflow-x: hidden; }
+
+  /* Sticky form drop shadow */
+  .float-shadow { box-shadow: 0 30px 80px -20px rgba(14,14,15,0.45), 0 0 0 1px rgba(255,184,0,0.15); }
+
+  /* Section heading kicker */
+  .kicker {
+    display:inline-flex; align-items:center; gap:.6rem;
+    font-family: 'Archivo', sans-serif; font-weight:700; font-size:.72rem;
+    letter-spacing:.22em; text-transform:uppercase;
+  }
+  .kicker .dot { width:8px; height:8px; background:#FFB800; border-radius:2px; transform:rotate(45deg); }
+
+  /* Display headings tightening */
+  .h-display { font-family:'Bebas Neue', sans-serif; line-height:.92; letter-spacing:-.005em; }
+  .h-serif   { font-family:'Instrument Serif', serif; font-style: italic; }
+</style>
+</head>
+
+<body class="relative">
+
+<!-- ============================================== -->
+<!-- 1. STICKY TOP BAR / CTA STRIP                   -->
+<!-- ============================================== -->
+<div id="topbar" class="sticky top-0 z-50 bg-ink text-bone border-b border-amber/20">
+  <!-- Announcement strip -->
+  <div class="bg-amber text-ink overflow-hidden">
+    <div class="marquee-track flex whitespace-nowrap py-1.5 text-xs sm:text-sm font-bold uppercase tracking-wider">
+      <span class="px-6">⚙ Limited Seats — New Batch Starts Soon</span><span class="px-6">★</span>
+      <span class="px-6">100% Placement Support — India &amp; Abroad</span><span class="px-6">★</span>
+      <span class="px-6">ISO Certified Training Institute</span><span class="px-6">★</span>
+      <span class="px-6">Book Free Career Consultation Today</span><span class="px-6">★</span>
+      <span class="px-6">⚙ Limited Seats — New Batch Starts Soon</span><span class="px-6">★</span>
+      <span class="px-6">100% Placement Support — India &amp; Abroad</span><span class="px-6">★</span>
+      <span class="px-6">ISO Certified Training Institute</span><span class="px-6">★</span>
+      <span class="px-6">Book Free Career Consultation Today</span><span class="px-6">★</span>
+    </div>
+  </div>
+
+  <!-- Main nav -->
+  <nav class="max-w-7xl mx-auto px-5 sm:px-8 py-3.5 flex items-center justify-between">
+    <a href="#" class="flex items-center gap-2.5 group">
+      <div class="w-9 h-9 bg-amber text-ink grid place-items-center font-display text-2xl rounded-sm">P</div>
+      <div class="leading-tight">
+        <div class="font-display text-xl tracking-wide">PRADEEP'S</div>
+        <div class="text-[10px] uppercase tracking-[0.22em] text-amber/90">Heavy Equipments Institute</div>
+      </div>
+    </a>
+
+    <div class="hidden md:flex items-center gap-7 text-sm font-medium">
+      <a href="#solution" class="hover:text-amber transition">Why Us</a>
+      <a href="#features" class="hover:text-amber transition">Courses</a>
+      <a href="#process" class="hover:text-amber transition">Process</a>
+      <a href="#faq" class="hover:text-amber transition">FAQ</a>
+    </div>
+
+    <div class="flex items-center gap-3">
+      <a href="tel:+910000000000" class="hidden sm:inline text-sm font-semibold hover:text-amber transition">+91 00000 00000</a>
+      <a href="#lead-form" class="bg-amber text-ink font-bold text-sm px-4 py-2 rounded-sm hover:bg-bone transition">
+        Book a Seat →
+      </a>
+      <button id="menuBtn" class="md:hidden p-1.5 border border-amber/30 rounded-sm" aria-label="Open menu">
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-width="2" d="M4 7h16M4 12h16M4 17h16"/></svg>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Mobile menu -->
+  <div id="mobileMenu" class="hidden md:hidden border-t border-amber/15 bg-coal">
+    <div class="flex flex-col px-5 py-3 text-sm font-medium">
+      <a href="#solution" class="py-2.5 border-b border-amber/10">Why Us</a>
+      <a href="#features" class="py-2.5 border-b border-amber/10">Courses</a>
+      <a href="#process" class="py-2.5 border-b border-amber/10">Process</a>
+      <a href="#faq" class="py-2.5">FAQ</a>
+    </div>
+  </div>
+</div>
+
+
+<!-- ============================================== -->
+<!-- 2. SPLIT HERO SECTION (asymmetrical)            -->
+<!-- ============================================== -->
+<section class="relative overflow-hidden bg-paper grain">
+  <!-- Background blobs -->
+  <div class="blob bg-amber" style="width:520px; height:520px; top:-160px; right:-120px;"></div>
+  <div class="blob bg-rust" style="width:420px; height:420px; bottom:-180px; left:-140px; opacity:.35;"></div>
+
+  <!-- Decorative warning stripe top-right -->
+  <div class="absolute top-0 right-0 w-40 h-3 stripes opacity-90"></div>
+
+  <div class="relative max-w-7xl mx-auto px-5 sm:px-8 pt-14 pb-20 lg:pt-24 lg:pb-32 grid lg:grid-cols-12 gap-10 lg:gap-6">
+
+    <!-- LEFT: 7 cols — Headline + CTA -->
+    <div class="lg:col-span-7 relative z-10">
+      <span class="kicker text-ink/70"><span class="dot"></span> Kerala's #1 Heavy Equipment Institute</span>
+
+      <h1 class="h-display mt-5 text-[14vw] sm:text-7xl lg:text-[7.5rem] xl:text-[8.5rem]">
+        COMMAND
+        <br>
+        THE <span class="text-rust">MACHINES.</span>
+        <br>
+        <span class="h-serif text-ink/85 text-[13vw] sm:text-6xl lg:text-9xl xl:text-[7rem] font-normal not-italic">
+          <em>build</em> the future.
+        </span>
+      </h1>
+
+      <p class="mt-6 max-w-xl text-base sm:text-lg text-ink/70 leading-relaxed">
+        Hands-on, ISO-certified training on JCBs, excavators, cranes &amp; forklifts —
+        delivered by master operators with 20+ years on real construction sites.
+        Graduate job-ready, with placement support across India &amp; abroad.
+      </p>
+
+      <!-- CTAs -->
+      <div class="mt-8 flex flex-wrap items-center gap-4">
+        <a href="#lead-form" class="group inline-flex items-center gap-3 bg-ink text-bone font-bold text-base px-7 py-4 rounded-sm hover:bg-rust transition">
+          Reserve My Seat
+          <span class="w-8 h-8 grid place-items-center bg-amber text-ink rounded-sm group-hover:translate-x-1 transition">→</span>
+        </a>
+        <a href="#process" class="inline-flex items-center gap-2 font-semibold underline underline-offset-4 decoration-amber decoration-2 hover:text-rust transition">
+          See how it works
+        </a>
+      </div>
+
+      <!-- Trust strip -->
+      <div class="mt-12 grid grid-cols-3 gap-6 max-w-lg">
+        <div>
+          <div class="h-display text-5xl stat-num">15+</div>
+          <div class="text-xs uppercase tracking-widest text-ink/60 mt-1">Years of Excellence</div>
+        </div>
+        <div>
+          <div class="h-display text-5xl stat-num">12K+</div>
+          <div class="text-xs uppercase tracking-widest text-ink/60 mt-1">Operators Trained</div>
+        </div>
+        <div>
+          <div class="h-display text-5xl stat-num">16</div>
+          <div class="text-xs uppercase tracking-widest text-ink/60 mt-1">Specialized Courses</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- RIGHT: 5 cols — Visual stack -->
+    <div class="lg:col-span-5 relative">
+      <div class="relative">
+        <!-- Main image card -->
+        <div class="relative aspect-[4/5] rounded-md overflow-hidden bg-coal float-shadow rotate-1">
+          <img src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?auto=format&fit=crop&w=900&q=80"
+               alt="Heavy excavator at work site"
+               class="w-full h-full object-cover" />
+          <div class="absolute inset-0 bg-gradient-to-t from-ink/60 via-transparent to-transparent"></div>
+
+          <!-- Floating badge: ISO -->
+          <div class="absolute top-5 left-5 bg-amber text-ink px-3 py-1.5 text-[11px] font-bold uppercase tracking-widest rounded-sm">
+            ISO 9001:2015
+          </div>
+
+          <!-- Bottom caption -->
+          <div class="absolute bottom-5 left-5 right-5 text-bone">
+            <div class="text-[10px] uppercase tracking-[0.25em] opacity-70">Now Enrolling</div>
+            <div class="font-display text-3xl mt-1">Batch 24 — June</div>
+          </div>
+        </div>
+
+        <!-- Floating stat card overlap -->
+        <div class="hidden sm:block absolute -bottom-8 -left-10 glass rounded-md p-5 w-56 -rotate-3 lift">
+          <div class="flex items-center gap-3">
+            <div class="w-10 h-10 bg-ink text-amber grid place-items-center rounded-sm font-bold">98%</div>
+            <div>
+              <div class="font-bold text-sm leading-tight">Placement Rate</div>
+              <div class="text-xs text-ink/60">Across last 5 batches</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Floating gear icon -->
+        <div class="hidden lg:grid absolute -top-8 -right-6 w-20 h-20 bg-amber rounded-full place-items-center rotate-12 lift">
+          <svg class="w-10 h-10 text-ink" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M12 8a4 4 0 100 8 4 4 0 000-8zm9.4 4.6l-2-1.2a7.6 7.6 0 000-2.8l2-1.2a.5.5 0 00.2-.6l-2-3.4a.5.5 0 00-.6-.2l-2.4.8a7.7 7.7 0 00-2.4-1.4L13.8.6a.5.5 0 00-.5-.4h-4a.5.5 0 00-.5.4l-.4 2.6a7.7 7.7 0 00-2.4 1.4l-2.4-.8a.5.5 0 00-.6.2l-2 3.4a.5.5 0 00.2.6l2 1.2a7.6 7.6 0 000 2.8l-2 1.2a.5.5 0 00-.2.6l2 3.4a.5.5 0 00.6.2l2.4-.8a7.7 7.7 0 002.4 1.4l.4 2.6a.5.5 0 00.5.4h4a.5.5 0 00.5-.4l.4-2.6a7.7 7.7 0 002.4-1.4l2.4.8a.5.5 0 00.6-.2l2-3.4a.5.5 0 00-.2-.6z"/>
+          </svg>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scrolling logo / partners marquee -->
+  <div class="relative border-y border-ink/10 bg-bone overflow-hidden">
+    <div class="marquee-track flex whitespace-nowrap py-4 items-center gap-12 text-ink/40 font-display text-2xl tracking-widest uppercase">
+      <span>JCB</span><span>•</span><span>Hitachi</span><span>•</span><span>Komatsu</span><span>•</span>
+      <span>Caterpillar</span><span>•</span><span>Volvo</span><span>•</span><span>Tata Hitachi</span><span>•</span>
+      <span>Liebherr</span><span>•</span><span>Mahindra</span><span>•</span>
+      <span>JCB</span><span>•</span><span>Hitachi</span><span>•</span><span>Komatsu</span><span>•</span>
+      <span>Caterpillar</span><span>•</span><span>Volvo</span><span>•</span><span>Tata Hitachi</span><span>•</span>
+      <span>Liebherr</span><span>•</span><span>Mahindra</span><span>•</span>
+    </div>
+  </div>
+</section>
+
+
+<!-- ============================================== -->
+<!-- 3. FLOATING LEAD FORM (sidebar on desktop)      -->
+<!-- ============================================== -->
+<aside id="floating-cta"
+       class="hidden xl:block fixed right-5 top-1/2 -translate-y-1/2 z-40 w-72">
+  <div class="bg-ink text-bone p-5 rounded-md float-shadow border border-amber/20">
+    <div class="flex items-center gap-2 mb-3">
+      <div class="w-2 h-2 bg-amber rounded-full animate-pulse"></div>
+      <div class="text-[10px] uppercase tracking-[0.22em] text-amber">Limited Slots</div>
+    </div>
+    <div class="font-display text-2xl leading-tight mb-3">Get free career counselling</div>
+    <form id="quickForm" class="space-y-2.5">
+      <input required name="name" placeholder="Full name" class="w-full bg-coal border border-amber/15 px-3 py-2.5 rounded-sm text-sm placeholder-bone/40 focus:outline-none focus:border-amber" />
+      <input required name="phone" type="tel" placeholder="Phone number" class="w-full bg-coal border border-amber/15 px-3 py-2.5 rounded-sm text-sm placeholder-bone/40 focus:outline-none focus:border-amber" />
+      <button type="submit" class="w-full bg-amber text-ink font-bold py-2.5 rounded-sm hover:bg-bone transition text-sm">
+        Reserve Free Call
+      </button>
+      <p class="text-[10px] text-bone/50">No spam. We call within 1 hour.</p>
+    </form>
+  </div>
+</aside>
+
+
+<!-- ============================================== -->
+<!-- 4. PROBLEM → SOLUTION SECTION                   -->
+<!-- ============================================== -->
+<section id="solution" class="relative bg-ink text-bone py-24 lg:py-32 overflow-hidden grain">
+  <!-- decorative blob -->
+  <div class="blob bg-amber" style="width:400px; height:400px; top:30%; left:-180px; opacity:.18;"></div>
+
+  <div class="max-w-7xl mx-auto px-5 sm:px-8 grid lg:grid-cols-12 gap-10 lg:gap-16 relative z-10">
+    <!-- Problem column -->
+    <div class="lg:col-span-5 reveal">
+      <span class="kicker text-amber"><span class="dot"></span> The Problem</span>
+      <h2 class="h-display mt-4 text-6xl sm:text-7xl lg:text-8xl">
+        Most "training"<br>institutes leave<br>you <span class="text-rust">stranded.</span>
+      </h2>
+      <ul class="mt-8 space-y-4 text-bone/75 max-w-md">
+        <li class="flex gap-3">
+          <span class="text-rust font-bold text-xl leading-none">✕</span>
+          <span>Outdated equipment, mostly classroom theory, almost zero seat-time on real machines.</span>
+        </li>
+        <li class="flex gap-3">
+          <span class="text-rust font-bold text-xl leading-none">✕</span>
+          <span>No safety certifications recognized abroad — your career stalls before it starts.</span>
+        </li>
+        <li class="flex gap-3">
+          <span class="text-rust font-bold text-xl leading-none">✕</span>
+          <span>You finish the course, get handed a certificate, and then… silence. No placement help.</span>
+        </li>
+      </ul>
+    </div>
+
+    <!-- Diagonal arrow / divider -->
+    <div class="lg:col-span-1 hidden lg:flex items-center justify-center">
+      <div class="w-px h-full bg-gradient-to-b from-transparent via-amber to-transparent"></div>
+    </div>
+
+    <!-- Solution column -->
+    <div class="lg:col-span-6 reveal">
+      <div class="relative bg-coal border border-amber/20 rounded-md p-8 lg:p-10">
+        <!-- corner badge -->
+        <div class="absolute -top-4 -right-4 bg-amber text-ink px-3 py-1.5 text-xs font-bold uppercase tracking-widest rounded-sm rotate-3">
+          The Pradeep Way
+        </div>
+
+        <span class="kicker text-amber"><span class="dot"></span> Our Solution</span>
+        <h3 class="h-display text-5xl sm:text-6xl mt-3">
+          Real machines.<br>Real sites.<br><span class="text-amber">Real careers.</span>
+        </h3>
+
+        <div class="mt-8 grid sm:grid-cols-2 gap-5">
+          <div class="bg-ink/40 p-5 rounded-sm border border-amber/10 lift">
+            <div class="text-amber font-display text-3xl">01</div>
+            <div class="font-bold mt-1">Hands-on first</div>
+            <p class="text-sm text-bone/65 mt-1">70% of training is operator-time on actual JCBs, cranes &amp; excavators.</p>
+          </div>
+          <div class="bg-ink/40 p-5 rounded-sm border border-amber/10 lift">
+            <div class="text-amber font-display text-3xl">02</div>
+            <div class="font-bold mt-1">Global certifications</div>
+            <p class="text-sm text-bone/65 mt-1">ISO-aligned curriculum that opens doors in the GCC, Singapore &amp; beyond.</p>
+          </div>
+          <div class="bg-ink/40 p-5 rounded-sm border border-amber/10 lift">
+            <div class="text-amber font-display text-3xl">03</div>
+            <div class="font-bold mt-1">Placement support</div>
+            <p class="text-sm text-bone/65 mt-1">A dedicated placement cell that works with you until you're hired.</p>
+          </div>
+          <div class="bg-ink/40 p-5 rounded-sm border border-amber/10 lift">
+            <div class="text-amber font-display text-3xl">04</div>
+            <div class="font-bold mt-1">Master instructors</div>
+            <p class="text-sm text-bone/65 mt-1">Learn from operators with 20+ years on infrastructure megaprojects.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ============================================== -->
+<!-- 5. FEATURES — HORIZONTAL SCROLL CARDS           -->
+<!-- ============================================== -->
+<section id="features" class="relative bg-paper py-24 lg:py-28 overflow-hidden">
+  <div class="max-w-7xl mx-auto px-5 sm:px-8">
+    <div class="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-6 mb-12">
+      <div class="reveal">
+        <span class="kicker text-ink/60"><span class="dot"></span> Our Programs</span>
+        <h2 class="h-display text-6xl sm:text-7xl lg:text-8xl mt-3 max-w-2xl">
+          16 courses.<br>One <span class="text-rust">elite</span> standard.
+        </h2>
+      </div>
+      <p class="max-w-md text-ink/70 reveal">
+        From entry-level forklift handling to advanced tower crane operations —
+        every course is built around real seat-time on real machines.
+      </p>
+    </div>
+
+    <!-- Scrollable cards -->
+    <div class="-mx-5 sm:-mx-8 px-5 sm:px-8 overflow-x-auto no-scrollbar">
+      <div class="flex gap-5 snap-x snap-mandatory pb-4" style="width:max-content;">
+
+        <!-- Card 1 -->
+        <article class="snap-start w-72 sm:w-80 bg-ink text-bone rounded-md p-6 lift relative overflow-hidden">
+          <div class="absolute top-0 right-0 w-24 h-1.5 stripes"></div>
+          <div class="w-12 h-12 bg-amber text-ink grid place-items-center rounded-sm font-display text-2xl">JCB</div>
+          <h3 class="h-display text-3xl mt-5">JCB Operator Training</h3>
+          <p class="text-sm text-bone/65 mt-2">Master backhoe loaders end-to-end — from controls to job-site protocols.</p>
+          <div class="flex items-center justify-between mt-6 pt-5 border-t border-amber/15 text-sm">
+            <span class="text-amber">3 months</span>
+            <span>Hands-on →</span>
+          </div>
+        </article>
+
+        <!-- Card 2 -->
+        <article class="snap-start w-72 sm:w-80 bg-amber text-ink rounded-md p-6 lift relative overflow-hidden">
+          <div class="absolute -top-6 -right-6 w-24 h-24 bg-ink rounded-full opacity-10"></div>
+          <div class="w-12 h-12 bg-ink text-amber grid place-items-center rounded-sm font-display text-xl">EXC</div>
+          <h3 class="h-display text-3xl mt-5">Excavator Training</h3>
+          <p class="text-sm text-ink/75 mt-2">Trench, lift, load &amp; grade with confidence on full-sized hydraulic rigs.</p>
+          <div class="flex items-center justify-between mt-6 pt-5 border-t border-ink/20 text-sm font-medium">
+            <span>4 months</span>
+            <span>Practical →</span>
+          </div>
+        </article>
+
+        <!-- Card 3 -->
+        <article class="snap-start w-72 sm:w-80 bg-bone text-ink rounded-md p-6 lift relative overflow-hidden border border-ink/10">
+          <div class="w-12 h-12 bg-rust text-bone grid place-items-center rounded-sm font-display text-xl">CRN</div>
+          <h3 class="h-display text-3xl mt-5">Mobile Crane Operator</h3>
+          <p class="text-sm text-ink/65 mt-2">Lifting plans, load charts, signaling — everything required on modern sites.</p>
+          <div class="flex items-center justify-between mt-6 pt-5 border-t border-ink/10 text-sm">
+            <span class="text-rust font-semibold">5 months</span>
+            <span>Certified →</span>
+          </div>
+        </article>
+
+        <!-- Card 4 -->
+        <article class="snap-start w-72 sm:w-80 bg-ink text-bone rounded-md p-6 lift relative overflow-hidden">
+          <div class="absolute top-0 right-0 w-24 h-1.5 stripes"></div>
+          <div class="w-12 h-12 bg-amber text-ink grid place-items-center rounded-sm font-display text-xl">FRK</div>
+          <h3 class="h-display text-3xl mt-5">Forklift Operations</h3>
+          <p class="text-sm text-bone/65 mt-2">Warehouse, logistics &amp; manufacturing — handle material like a pro.</p>
+          <div class="flex items-center justify-between mt-6 pt-5 border-t border-amber/15 text-sm">
+            <span class="text-amber">2 months</span>
+            <span>Job-ready →</span>
+          </div>
+        </article>
+
+        <!-- Card 5 -->
+        <article class="snap-start w-72 sm:w-80 bg-coal text-bone rounded-md p-6 lift relative overflow-hidden border border-amber/10">
+          <div class="w-12 h-12 bg-amber text-ink grid place-items-center rounded-sm font-display text-xl">TWR</div>
+          <h3 class="h-display text-3xl mt-5">Tower Crane Operator</h3>
+          <p class="text-sm text-bone/65 mt-2">Precision lifts on high-rise builds — the most in-demand operator role.</p>
+          <div class="flex items-center justify-between mt-6 pt-5 border-t border-amber/15 text-sm">
+            <span class="text-amber">6 months</span>
+            <span>Premium →</span>
+          </div>
+        </article>
+
+        <!-- Card 6 -->
+        <article class="snap-start w-72 sm:w-80 bg-bone text-ink rounded-md p-6 lift relative overflow-hidden border border-ink/10">
+          <div class="w-12 h-12 bg-ink text-amber grid place-items-center rounded-sm font-display text-xl">HZD</div>
+          <h3 class="h-display text-3xl mt-5">Hazardous License</h3>
+          <p class="text-sm text-ink/65 mt-2">Specialized training for transporting hazardous goods — globally recognized.</p>
+          <div class="flex items-center justify-between mt-6 pt-5 border-t border-ink/10 text-sm">
+            <span class="font-semibold">3 months</span>
+            <span>Specialized →</span>
+          </div>
+        </article>
+
+        <!-- "View all" terminal card -->
+        <article class="snap-start w-64 sm:w-72 rounded-md p-6 lift relative overflow-hidden border-2 border-dashed border-ink/30 grid place-items-center text-center">
+          <div>
+            <div class="font-display text-5xl">+10</div>
+            <div class="text-sm text-ink/70 mt-2">More specialized programs</div>
+            <a href="#lead-form" class="inline-block mt-4 bg-ink text-bone px-5 py-2.5 text-sm font-bold rounded-sm">Explore all →</a>
+          </div>
+        </article>
+      </div>
+    </div>
+
+    <p class="text-sm text-ink/50 mt-3 lg:hidden">← Swipe to explore →</p>
+  </div>
+</section>
+
+
+<!-- ============================================== -->
+<!-- 6. PROCESS / HOW IT WORKS — Zig-zag             -->
+<!-- ============================================== -->
+<section id="process" class="relative bg-bone py-24 lg:py-32 overflow-hidden">
+  <!-- decorative side number -->
+  <div class="hidden lg:block absolute right-0 top-12 font-display text-[20rem] text-ink/[0.04] leading-none select-none pointer-events-none">04</div>
+
+  <div class="max-w-6xl mx-auto px-5 sm:px-8 relative z-10">
+    <div class="text-center max-w-2xl mx-auto reveal">
+      <span class="kicker text-ink/60"><span class="dot"></span> Your Path</span>
+      <h2 class="h-display text-6xl sm:text-7xl lg:text-8xl mt-3">
+        From <span class="h-serif text-rust font-normal not-italic"><em>curious</em></span><br>to <span class="text-rust">certified.</span>
+      </h2>
+      <p class="text-ink/65 mt-4">Four steps. One transformation. We guide you the entire way.</p>
+    </div>
+
+    <!-- Zig-zag steps -->
+    <div class="mt-16 space-y-12 lg:space-y-16">
+
+      <!-- Step 1 - Left -->
+      <div class="grid lg:grid-cols-12 gap-6 items-center reveal">
+        <div class="lg:col-span-5">
+          <div class="bg-paper rounded-md p-7 border border-ink/10 lift relative">
+            <div class="absolute -top-5 -left-5 w-14 h-14 bg-ink text-amber font-display text-3xl grid place-items-center rounded-md float-shadow">01</div>
+            <h3 class="h-display text-3xl mt-3">Free Counselling</h3>
+            <p class="text-ink/70 text-sm mt-2">Tell us your goals. We'll map the right course, timeline &amp; placement plan for you.</p>
+          </div>
+        </div>
+        <div class="lg:col-span-7 hidden lg:flex items-center pl-8">
+          <div class="h-px flex-1 bg-gradient-to-r from-amber to-transparent"></div>
+          <span class="font-serif italic text-ink/40 px-4">a quick chat</span>
+        </div>
+      </div>
+
+      <!-- Step 2 - Right -->
+      <div class="grid lg:grid-cols-12 gap-6 items-center reveal">
+        <div class="lg:col-span-7 hidden lg:flex items-center pr-8 justify-end">
+          <span class="font-serif italic text-ink/40 px-4">your batch begins</span>
+          <div class="h-px flex-1 bg-gradient-to-l from-amber to-transparent"></div>
+        </div>
+        <div class="lg:col-span-5 lg:col-start-8">
+          <div class="bg-ink text-bone rounded-md p-7 lift relative">
+            <div class="absolute -top-5 -left-5 w-14 h-14 bg-amber text-ink font-display text-3xl grid place-items-center rounded-md float-shadow">02</div>
+            <h3 class="h-display text-3xl mt-3 text-amber">Enrol &amp; Begin</h3>
+            <p class="text-bone/70 text-sm mt-2">Flexible payment plans &amp; hostel options. We onboard you in days, not weeks.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Step 3 - Left -->
+      <div class="grid lg:grid-cols-12 gap-6 items-center reveal">
+        <div class="lg:col-span-5">
+          <div class="bg-amber text-ink rounded-md p-7 lift relative">
+            <div class="absolute -top-5 -left-5 w-14 h-14 bg-ink text-amber font-display text-3xl grid place-items-center rounded-md float-shadow">03</div>
+            <h3 class="h-display text-3xl mt-3">Train on Real Machines</h3>
+            <p class="text-ink/80 text-sm mt-2">Days on the seat. Real soil. Real loads. Mentored by master operators every step.</p>
+          </div>
+        </div>
+        <div class="lg:col-span-7 hidden lg:flex items-center pl-8">
+          <div class="h-px flex-1 bg-gradient-to-r from-amber to-transparent"></div>
+          <span class="font-serif italic text-ink/40 px-4">months of mastery</span>
+        </div>
+      </div>
+
+      <!-- Step 4 - Right -->
+      <div class="grid lg:grid-cols-12 gap-6 items-center reveal">
+        <div class="lg:col-span-7 hidden lg:flex items-center pr-8 justify-end">
+          <span class="font-serif italic text-ink/40 px-4">land the role</span>
+          <div class="h-px flex-1 bg-gradient-to-l from-amber to-transparent"></div>
+        </div>
+        <div class="lg:col-span-5 lg:col-start-8">
+          <div class="bg-rust text-bone rounded-md p-7 lift relative">
+            <div class="absolute -top-5 -left-5 w-14 h-14 bg-ink text-amber font-display text-3xl grid place-items-center rounded-md float-shadow">04</div>
+            <h3 class="h-display text-3xl mt-3">Get Certified &amp; Placed</h3>
+            <p class="text-bone/85 text-sm mt-2">Walk out with globally-recognized credentials and active placement support.</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ============================================== -->
+<!-- 7. VISUAL SHOWCASE — Asymmetric grid            -->
+<!-- ============================================== -->
+<section class="relative bg-paper py-24 lg:py-28 overflow-hidden">
+  <div class="max-w-7xl mx-auto px-5 sm:px-8">
+
+    <div class="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-6 mb-10">
+      <div class="reveal">
+        <span class="kicker text-ink/60"><span class="dot"></span> On the Ground</span>
+        <h2 class="h-display text-6xl sm:text-7xl lg:text-8xl mt-3 max-w-3xl">
+          This is what <span class="text-rust">training</span><br>actually looks like.
+        </h2>
+      </div>
+      <a href="#lead-form" class="inline-flex items-center gap-2 font-semibold text-ink hover:text-rust transition self-start lg:self-auto">
+        Visit our campus
+        <span class="w-9 h-9 bg-ink text-amber grid place-items-center rounded-sm">→</span>
+      </a>
+    </div>
+
+    <!-- Asymmetric image grid -->
+    <div class="grid grid-cols-12 grid-rows-2 gap-4 h-[700px] sm:h-[600px]">
+      <!-- Big left -->
+      <div class="col-span-12 sm:col-span-7 row-span-2 relative rounded-md overflow-hidden lift group">
+        <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=1200&q=80" class="w-full h-full object-cover group-hover:scale-105 transition duration-700" alt="Excavator on a worksite" />
+        <div class="absolute inset-0 bg-gradient-to-t from-ink/80 via-transparent to-transparent"></div>
+        <div class="absolute bottom-6 left-6 right-6 text-bone">
+          <div class="text-[10px] uppercase tracking-[0.25em] text-amber">Live Site Training</div>
+          <div class="font-display text-4xl mt-1">Excavator Field Practice</div>
+        </div>
+      </div>
+
+      <!-- Top right -->
+      <div class="col-span-6 sm:col-span-5 relative rounded-md overflow-hidden lift group">
+        <img src="https://images.unsplash.com/photo-1581094271901-8022df4466f9?auto=format&fit=crop&w=800&q=80" class="w-full h-full object-cover group-hover:scale-105 transition duration-700" alt="Crane operator" />
+        <div class="absolute top-3 right-3 bg-amber text-ink text-[10px] font-bold uppercase tracking-widest px-2.5 py-1 rounded-sm">New</div>
+      </div>
+
+      <!-- Bottom right -->
+      <div class="col-span-6 sm:col-span-5 relative rounded-md overflow-hidden lift bg-ink text-bone p-6 flex flex-col justify-between">
+        <div class="text-[10px] uppercase tracking-[0.25em] text-amber">Outcomes</div>
+        <div>
+          <div class="h-display text-6xl text-amber">98%</div>
+          <p class="text-sm text-bone/70 mt-2">of our graduates landed an operator role within 90 days of certification.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ============================================== -->
+<!-- 8. TESTIMONIALS                                 -->
+<!-- ============================================== -->
+<section class="relative bg-coal text-bone py-24 lg:py-32 overflow-hidden grain">
+  <div class="blob bg-amber" style="width:380px; height:380px; top:-100px; right:-150px; opacity:.15;"></div>
+
+  <div class="max-w-7xl mx-auto px-5 sm:px-8 relative z-10">
+    <div class="grid lg:grid-cols-12 gap-8 items-end mb-12">
+      <div class="lg:col-span-7 reveal">
+        <span class="kicker text-amber"><span class="dot"></span> What graduates say</span>
+        <h2 class="h-display text-6xl sm:text-7xl lg:text-8xl mt-3">
+          Real stories.<br><span class="h-serif text-amber font-normal not-italic"><em>Real</em></span> careers.
+        </h2>
+      </div>
+      <div class="lg:col-span-5 reveal">
+        <p class="text-bone/65">From small Kerala towns to construction sites in the Gulf — here's what changed for our graduates after Pradeep's.</p>
+      </div>
+    </div>
+
+    <!-- Testimonial cards -->
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
+
+      <!-- Card 1 — featured -->
+      <div class="lg:col-span-1 lg:row-span-2 bg-amber text-ink p-7 rounded-md relative lift">
+        <svg class="w-10 h-10 opacity-30 mb-4" viewBox="0 0 24 24" fill="currentColor"><path d="M9 7H5a2 2 0 00-2 2v6a2 2 0 002 2h2v2a2 2 0 002 2v-7a4 4 0 00-4-4V8a4 4 0 014-4V2a6 6 0 00-6 6m18 1h-4a2 2 0 00-2 2v6a2 2 0 002 2h2v2a2 2 0 002 2v-7a4 4 0 00-4-4V8a4 4 0 014-4V2a6 6 0 00-6 6"/></svg>
+        <p class="font-serif text-2xl leading-snug">"I went from helping at my uncle's shop to operating cranes in Dubai within a year. Pradeep's didn't just teach me machines — they built my entire future."</p>
+        <div class="flex items-center gap-3 mt-8 pt-5 border-t border-ink/15">
+          <div class="w-12 h-12 bg-ink text-amber rounded-full grid place-items-center font-bold">RK</div>
+          <div>
+            <div class="font-bold">Rahul Krishnan</div>
+            <div class="text-xs text-ink/60">Tower Crane Operator · Dubai</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="bg-ink/60 border border-amber/15 p-6 rounded-md lift">
+        <div class="flex gap-1 text-amber mb-3">★★★★★</div>
+        <p class="text-bone/85">"The instructors actually let you sit on the machines from week one. Most other places just teach theory."</p>
+        <div class="flex items-center gap-3 mt-5 pt-4 border-t border-amber/15">
+          <div class="w-10 h-10 bg-amber text-ink rounded-full grid place-items-center font-bold text-sm">AS</div>
+          <div>
+            <div class="font-semibold text-sm">Arun S.</div>
+            <div class="text-xs text-bone/55">JCB Operator · Kochi</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="bg-ink/60 border border-amber/15 p-6 rounded-md lift">
+        <div class="flex gap-1 text-amber mb-3">★★★★★</div>
+        <p class="text-bone/85">"Placement support was unreal. They followed up with me for months until I had a job offer in Qatar."</p>
+        <div class="flex items-center gap-3 mt-5 pt-4 border-t border-amber/15">
+          <div class="w-10 h-10 bg-amber text-ink rounded-full grid place-items-center font-bold text-sm">JM</div>
+          <div>
+            <div class="font-semibold text-sm">Jithin Mohan</div>
+            <div class="text-xs text-bone/55">Excavator Operator · Qatar</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 4 -->
+      <div class="bg-ink/60 border border-amber/15 p-6 rounded-md lift">
+        <div class="flex gap-1 text-amber mb-3">★★★★★</div>
+        <p class="text-bone/85">"As a woman in heavy equipment, I was nervous. The team made me feel respected and prepared from day one."</p>
+        <div class="flex items-center gap-3 mt-5 pt-4 border-t border-amber/15">
+          <div class="w-10 h-10 bg-amber text-ink rounded-full grid place-items-center font-bold text-sm">PN</div>
+          <div>
+            <div class="font-semibold text-sm">Priya N.</div>
+            <div class="text-xs text-bone/55">Forklift Operator · Bangalore</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 5 -->
+      <div class="bg-ink/60 border border-amber/15 p-6 rounded-md lift md:col-span-2 lg:col-span-1">
+        <div class="flex gap-1 text-amber mb-3">★★★★★</div>
+        <p class="text-bone/85">"My salary tripled within 18 months of finishing the diploma. Best decision I ever made."</p>
+        <div class="flex items-center gap-3 mt-5 pt-4 border-t border-amber/15">
+          <div class="w-10 h-10 bg-amber text-ink rounded-full grid place-items-center font-bold text-sm">TV</div>
+          <div>
+            <div class="font-semibold text-sm">Thomas V.</div>
+            <div class="text-xs text-bone/55">Crane Operator · Saudi Arabia</div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ============================================== -->
+<!-- 9. STRONG MID-PAGE CTA BLOCK                    -->
+<!-- ============================================== -->
+<section class="relative bg-amber text-ink py-20 lg:py-28 overflow-hidden">
+  <!-- Diagonal stripe top -->
+  <div class="absolute top-0 left-0 right-0 h-3 stripes opacity-90"></div>
+
+  <!-- Big background number -->
+  <div class="absolute -right-10 -bottom-20 font-display text-[26rem] text-ink/[0.06] leading-none select-none pointer-events-none">2026</div>
+
+  <div class="max-w-7xl mx-auto px-5 sm:px-8 relative z-10 grid lg:grid-cols-12 gap-8 items-center">
+    <div class="lg:col-span-8">
+      <span class="kicker text-ink/70"><span class="dot bg-ink"></span> June Intake — Now Open</span>
+      <h2 class="h-display text-6xl sm:text-7xl lg:text-9xl mt-3 leading-[0.9]">
+        Your seat<br>is <span class="h-serif font-normal not-italic"><em>still</em></span> open.<br>
+        <span class="text-rust">For now.</span>
+      </h2>
+      <p class="mt-6 max-w-xl text-lg text-ink/75">
+        Each batch caps at 30 students so every operator gets real seat-time. Lock your spot before this batch fills.
+      </p>
+    </div>
+    <div class="lg:col-span-4 flex flex-col gap-4">
+      <a href="#lead-form" class="block bg-ink text-bone text-center font-bold text-lg px-8 py-5 rounded-sm hover:bg-rust transition lift">
+        Book My Free Counselling →
+      </a>
+      <a href="tel:+910000000000" class="block border-2 border-ink text-center font-bold px-8 py-4 rounded-sm hover:bg-ink hover:text-bone transition">
+        Or Call: +91 00000 00000
+      </a>
+      <div class="flex items-center gap-2 text-sm text-ink/70 justify-center mt-1">
+        <span class="w-2 h-2 bg-rust rounded-full animate-pulse"></span>
+        Only <strong>7 seats left</strong> in this batch
+      </div>
+    </div>
+  </div>
+
+  <!-- Diagonal stripe bottom -->
+  <div class="absolute bottom-0 left-0 right-0 h-3 stripes opacity-90"></div>
+</section>
+
+
+<!-- ============================================== -->
+<!-- 10. FAQ SECTION (Accordion)                     -->
+<!-- ============================================== -->
+<section id="faq" class="relative bg-paper py-24 lg:py-32 overflow-hidden">
+  <div class="max-w-5xl mx-auto px-5 sm:px-8">
+    <div class="grid lg:grid-cols-12 gap-10">
+      <div class="lg:col-span-5 reveal">
+        <span class="kicker text-ink/60"><span class="dot"></span> Questions</span>
+        <h2 class="h-display text-6xl sm:text-7xl mt-3">
+          Everything<br>you'll <span class="text-rust">ask.</span>
+        </h2>
+        <p class="text-ink/65 mt-5">Still have questions after this? Our counsellors are one call away.</p>
+        <a href="#lead-form" class="inline-flex items-center gap-2 mt-5 font-semibold underline underline-offset-4 decoration-amber decoration-2 hover:text-rust transition">
+          Talk to a counsellor →
+        </a>
+      </div>
+
+      <div class="lg:col-span-7 space-y-3">
+        <details class="group bg-bone border border-ink/10 rounded-md p-5 cursor-pointer">
+          <summary class="flex items-start justify-between gap-4 list-none">
+            <span class="font-bold text-lg pr-4">What career prospects open up after I finish?</span>
+            <span class="acc-icon w-7 h-7 bg-amber text-ink grid place-items-center rounded-sm font-bold text-xl shrink-0 transition-transform">+</span>
+          </summary>
+          <p class="mt-3 text-ink/70 text-sm leading-relaxed">Depending on your course, you can work as a JCB Operator, Crane Operator, Forklift Operator, Trailer Operator, or Hazardous Materials Driver — across construction, logistics, mining, and infrastructure projects in India and abroad.</p>
+        </details>
+
+        <details class="group bg-bone border border-ink/10 rounded-md p-5 cursor-pointer">
+          <summary class="flex items-start justify-between gap-4 list-none">
+            <span class="font-bold text-lg pr-4">Are your instructors certified and experienced?</span>
+            <span class="acc-icon w-7 h-7 bg-amber text-ink grid place-items-center rounded-sm font-bold text-xl shrink-0 transition-transform">+</span>
+          </summary>
+          <p class="mt-3 text-ink/70 text-sm leading-relaxed">Every instructor is certified and brings decades of real-site experience. They share practical knowledge so you get genuine hands-on capability with every machine you train on.</p>
+        </details>
+
+        <details class="group bg-bone border border-ink/10 rounded-md p-5 cursor-pointer">
+          <summary class="flex items-start justify-between gap-4 list-none">
+            <span class="font-bold text-lg pr-4">What will I actually learn during the training?</span>
+            <span class="acc-icon w-7 h-7 bg-amber text-ink grid place-items-center rounded-sm font-bold text-xl shrink-0 transition-transform">+</span>
+          </summary>
+          <p class="mt-3 text-ink/70 text-sm leading-relaxed">Hands-on operation of your chosen equipment, plus safety protocols, equipment maintenance, site assessment, regulatory compliance, load handling, troubleshooting, and documentation — everything an employer expects of a qualified operator.</p>
+        </details>
+
+        <details class="group bg-bone border border-ink/10 rounded-md p-5 cursor-pointer">
+          <summary class="flex items-start justify-between gap-4 list-none">
+            <span class="font-bold text-lg pr-4">Do you really offer 100% placement support?</span>
+            <span class="acc-icon w-7 h-7 bg-amber text-ink grid place-items-center rounded-sm font-bold text-xl shrink-0 transition-transform">+</span>
+          </summary>
+          <p class="mt-3 text-ink/70 text-sm leading-relaxed">Yes. Our placement cell stays with you until you're hired — both for opportunities in India and overseas. We work with employers across the GCC, Singapore and beyond.</p>
+        </details>
+
+        <details class="group bg-bone border border-ink/10 rounded-md p-5 cursor-pointer">
+          <summary class="flex items-start justify-between gap-4 list-none">
+            <span class="font-bold text-lg pr-4">What does it cost? Are there payment plans?</span>
+            <span class="acc-icon w-7 h-7 bg-amber text-ink grid place-items-center rounded-sm font-bold text-xl shrink-0 transition-transform">+</span>
+          </summary>
+          <p class="mt-3 text-ink/70 text-sm leading-relaxed">Course fees vary by program length and equipment type. We offer flexible installment plans so cost isn't a barrier. Book a free counselling call and we'll walk you through every option transparently.</p>
+        </details>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ============================================== -->
+<!-- 11. FINAL CTA + CONTACT FORM                    -->
+<!-- ============================================== -->
+<section id="lead-form" class="relative bg-ink text-bone py-24 lg:py-32 overflow-hidden grain">
+  <div class="blob bg-amber" style="width:500px; height:500px; top:-150px; right:-150px; opacity:.18;"></div>
+  <div class="blob bg-rust" style="width:380px; height:380px; bottom:-150px; left:-150px; opacity:.25;"></div>
+
+  <div class="max-w-6xl mx-auto px-5 sm:px-8 relative z-10 grid lg:grid-cols-12 gap-10 items-center">
+
+    <div class="lg:col-span-6 reveal">
+      <span class="kicker text-amber"><span class="dot"></span> Last Step</span>
+      <h2 class="h-display text-6xl sm:text-7xl lg:text-8xl mt-3 leading-[0.9]">
+        Stop scrolling.<br>
+        <span class="text-amber">Start operating.</span>
+      </h2>
+      <p class="text-bone/70 text-lg mt-5 max-w-md">
+        Drop your details. A senior counsellor will call you within an hour to map your path — fees, timeline, placement, all of it.
+      </p>
+
+      <ul class="mt-8 space-y-3 text-sm text-bone/85">
+        <li class="tick">Free, no-obligation career counselling</li>
+        <li class="tick">Personalised course recommendation</li>
+        <li class="tick">Transparent pricing &amp; payment plan</li>
+        <li class="tick">Hostel &amp; logistics guidance</li>
+      </ul>
+    </div>
+
+    <div class="lg:col-span-6">
+      <form id="leadForm" class="bg-coal/80 glass-dark p-7 sm:p-9 rounded-md float-shadow space-y-4">
+        <div class="flex items-center justify-between">
+          <h3 class="font-display text-3xl">Reserve Your Seat</h3>
+          <span class="text-[10px] uppercase tracking-widest bg-amber text-ink px-2.5 py-1 rounded-sm font-bold">Free</span>
+        </div>
+
+        <div>
+          <label class="text-xs uppercase tracking-widest text-bone/50">Full Name</label>
+          <input required name="name" type="text" placeholder="Eg. Arun Krishnan"
+                 class="mt-1 w-full bg-ink/70 border border-amber/15 px-4 py-3 rounded-sm placeholder-bone/30 focus:outline-none focus:border-amber transition" />
+        </div>
+
+        <div class="grid sm:grid-cols-2 gap-4">
+          <div>
+            <label class="text-xs uppercase tracking-widest text-bone/50">Phone</label>
+            <input required name="phone" type="tel" placeholder="+91 00000 00000"
+                   class="mt-1 w-full bg-ink/70 border border-amber/15 px-4 py-3 rounded-sm placeholder-bone/30 focus:outline-none focus:border-amber transition" />
+          </div>
+          <div>
+            <label class="text-xs uppercase tracking-widest text-bone/50">Email</label>
+            <input required name="email" type="email" placeholder="you@email.com"
+                   class="mt-1 w-full bg-ink/70 border border-amber/15 px-4 py-3 rounded-sm placeholder-bone/30 focus:outline-none focus:border-amber transition" />
+          </div>
+        </div>
+
+        <div>
+          <label class="text-xs uppercase tracking-widest text-bone/50">Interested Course (optional)</label>
+          <select name="course" class="mt-1 w-full bg-ink/70 border border-amber/15 px-4 py-3 rounded-sm focus:outline-none focus:border-amber transition">
+            <option>Help me choose</option>
+            <option>JCB Operator Training</option>
+            <option>Excavator Training</option>
+            <option>Mobile Crane Operator</option>
+            <option>Tower Crane Operator</option>
+            <option>Forklift Operations</option>
+            <option>Hazardous Driver's License</option>
+            <option>Advanced Diploma in Heavy Equipment</option>
+          </select>
+        </div>
+
+        <button type="submit" class="w-full bg-amber text-ink font-bold text-lg py-4 rounded-sm hover:bg-bone transition flex items-center justify-center gap-3 group">
+          Send My Details
+          <span class="w-8 h-8 grid place-items-center bg-ink text-amber rounded-sm group-hover:translate-x-1 transition">→</span>
+        </button>
+
+        <p class="text-[11px] text-bone/45 text-center">By submitting, you agree to be contacted by our counselling team. We never share your data.</p>
+      </form>
+    </div>
+  </div>
+</section>
+
+
+<!-- ============================================== -->
+<!-- 12. MINIMAL FOOTER                              -->
+<!-- ============================================== -->
+<footer class="bg-coal text-bone/80">
+  <div class="max-w-7xl mx-auto px-5 sm:px-8 py-12 grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
+    <div class="lg:col-span-2">
+      <div class="flex items-center gap-2.5">
+        <div class="w-9 h-9 bg-amber text-ink grid place-items-center font-display text-2xl rounded-sm">P</div>
+        <div class="leading-tight">
+          <div class="font-display text-xl tracking-wide text-bone">PRADEEP'S</div>
+          <div class="text-[10px] uppercase tracking-[0.22em] text-amber">Heavy Equipments Institute</div>
+        </div>
+      </div>
+      <p class="mt-4 text-sm max-w-sm text-bone/55">
+        Kerala's most trusted ISO-certified institute for heavy equipment operator training.
+        Building careers — one operator at a time.
+      </p>
+    </div>
+
+    <div>
+      <h4 class="font-display text-lg text-amber tracking-widest">EXPLORE</h4>
+      <ul class="mt-3 space-y-2 text-sm">
+        <li><a href="#solution" class="hover:text-amber transition">Why Us</a></li>
+        <li><a href="#features" class="hover:text-amber transition">Courses</a></li>
+        <li><a href="#process" class="hover:text-amber transition">How it works</a></li>
+        <li><a href="#faq" class="hover:text-amber transition">FAQ</a></li>
+      </ul>
+    </div>
+
+    <div>
+      <h4 class="font-display text-lg text-amber tracking-widest">REACH US</h4>
+      <ul class="mt-3 space-y-2 text-sm">
+        <li>+91 00000 00000</li>
+        <li>hello@pradeepinstitute.in</li>
+        <li>Kerala, India</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="border-t border-amber/10">
+    <div class="max-w-7xl mx-auto px-5 sm:px-8 py-5 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-bone/40">
+      <p>© 2026 Pradeep's Institute of Heavy Equipments. All rights reserved.</p>
+      <div class="flex items-center gap-4">
+        <a href="#" class="hover:text-amber transition">Privacy</a>
+        <span>·</span>
+        <a href="#" class="hover:text-amber transition">Terms</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+<!-- ============================================== -->
+<!-- MOBILE STICKY BOTTOM CTA                        -->
+<!-- ============================================== -->
+<div class="xl:hidden fixed bottom-0 left-0 right-0 z-40 bg-ink text-bone border-t border-amber/30 px-4 py-3 flex items-center gap-3 shadow-2xl">
+  <div class="flex-1">
+    <div class="text-[10px] uppercase tracking-widest text-amber">Limited Seats</div>
+    <div class="font-bold text-sm">Book your free counselling</div>
+  </div>
+  <a href="#lead-form" class="bg-amber text-ink font-bold px-4 py-2.5 rounded-sm text-sm whitespace-nowrap hover:bg-bone transition">
+    Book Now →
+  </a>
+</div>
+
+
+<!-- ============================================== -->
+<!-- MINIMAL JS — menu, scroll reveal, form          -->
+<!-- ============================================== -->
+<script>
+  // Mobile menu toggle
+  const menuBtn = document.getElementById('menuBtn');
+  const mobileMenu = document.getElementById('mobileMenu');
+  menuBtn?.addEventListener('click', () => mobileMenu.classList.toggle('hidden'));
+  // Close on link click
+  mobileMenu?.querySelectorAll('a').forEach(a => a.addEventListener('click', () => mobileMenu.classList.add('hidden')));
+
+  // Scroll reveal observer
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        e.target.classList.add('visible');
+        io.unobserve(e.target);
+      }
+    });
+  }, { threshold: 0.12 });
+  document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+
+  // Hide floating side CTA when in lead-form section to avoid duplication
+  const leadForm = document.getElementById('lead-form');
+  const floatingCTA = document.getElementById('floating-cta');
+  if (leadForm && floatingCTA) {
+    const ioCTA = new IntersectionObserver((entries) => {
+      entries.forEach(e => {
+        floatingCTA.style.opacity = e.isIntersecting ? '0' : '1';
+        floatingCTA.style.pointerEvents = e.isIntersecting ? 'none' : 'auto';
+        floatingCTA.style.transition = 'opacity .3s ease';
+      });
+    }, { threshold: 0.15 });
+    ioCTA.observe(leadForm);
+  }
+
+  // Form validation + fake submit
+  function attachForm(id) {
+    const f = document.getElementById(id);
+    if (!f) return;
+    f.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const data = Object.fromEntries(new FormData(f));
+      // Simple validation
+      if (!data.name || !data.phone) {
+        alert('Please fill in your name and phone.');
+        return;
+      }
+      const phone = String(data.phone).replace(/\D/g, '');
+      if (phone.length < 7) {
+        alert('Please enter a valid phone number.');
+        return;
+      }
+      // Replace this with real backend POST
+      f.innerHTML = `
+        <div class="text-center py-8">
+          <div class="w-16 h-16 mx-auto bg-amber text-ink grid place-items-center rounded-full font-display text-3xl">✓</div>
+          <h3 class="font-display text-3xl mt-4 text-amber">You're In</h3>
+          <p class="text-bone/70 mt-2 text-sm">Thanks ${data.name.split(' ')[0]}! Our counsellor will call you within an hour.</p>
+        </div>`;
+    });
+  }
+  attachForm('leadForm');
+  attachForm('quickForm');
+</script>
+
+</body>
+</html>
