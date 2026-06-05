@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>You're In — Pradeep's Institute of Heavy Equipment</title>
+<meta name="robots" content="noindex,follow" />
+
+<!-- Same font pairing as the main site -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Archivo:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+<style>
+  :root {
+    --nb-black:  #000000;
+    --nb-cream:  #F5F5F5;
+    --nb-white:  #FFFFFF;
+    --nb-yellow: #FFE600;
+    --nb-magenta:#FF00D4;
+  }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; }
+  body {
+    font-family: 'Archivo', system-ui, sans-serif;
+    background: var(--nb-cream);
+    color: var(--nb-black);
+    -webkit-font-smoothing: antialiased;
+    min-height: 100vh;
+    display: grid;
+    place-items: center;
+    padding: 24px;
+  }
+  .card {
+    background: var(--nb-white);
+    border: 3px solid #000;
+    border-radius: 14px;
+    box-shadow: 8px 8px 0 #000;
+    max-width: 640px;
+    width: 100%;
+    padding: 40px 28px;
+    text-align: center;
+  }
+  @media (min-width: 640px) { .card { padding: 56px 48px; } }
+
+  .badge {
+    display: inline-grid;
+    place-items: center;
+    width: 84px; height: 84px;
+    background: var(--nb-yellow);
+    border: 3px solid #000;
+    border-radius: 9999px;
+    box-shadow: 6px 6px 0 #000;
+    margin-bottom: 28px;
+  }
+  .badge svg { width: 44px; height: 44px; }
+
+  .kicker {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    font-weight: 800;
+    font-size: 12px;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+  }
+  .kicker .dot {
+    width: 12px; height: 12px;
+    background: var(--nb-magenta);
+    border: 2px solid #000;
+    transform: rotate(45deg);
+  }
+
+  h1 {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: clamp(56px, 11vw, 120px);
+    line-height: 0.92;
+    letter-spacing: -0.005em;
+    margin: 18px 0 22px;
+    color: #000;
+  }
+  h1 .accent { color: var(--nb-magenta); }
+
+  p {
+    font-size: 16px;
+    line-height: 1.55;
+    color: rgba(0,0,0,0.78);
+    max-width: 520px;
+    margin: 0 auto;
+  }
+  @media (min-width: 640px) { p { font-size: 18px; } }
+  p strong { color: #000; font-weight: 700; }
+
+  @keyframes pop {
+    0%   { transform: scale(.5) rotate(-8deg); opacity: 0; }
+    60%  { transform: scale(1.08) rotate(3deg); opacity: 1; }
+    100% { transform: scale(1) rotate(0deg); }
+  }
+  .badge { animation: pop .55s cubic-bezier(.2,.7,.2,1.4) both; }
+
+  @keyframes rise {
+    from { opacity: 0; transform: translateY(20px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+  .kicker, h1, p { animation: rise .55s ease-out both; }
+  .kicker { animation-delay: .15s; }
+  h1      { animation-delay: .25s; }
+  p       { animation-delay: .35s; }
+</style>
+</head>
+
+<body>
+  <main class="card" role="status" aria-live="polite">
+    <div class="badge" aria-hidden="true">
+      <svg viewBox="0 0 24 24" fill="none" stroke="#000" stroke-width="3.5"
+           stroke-linecap="round" stroke-linejoin="round">
+        <path d="M5 13l4 4L19 7"/>
+      </svg>
+    </div>
+
+    <span class="kicker">
+      <span class="dot"></span>
+      Registration Received
+    </span>
+
+    <h1>YOU'RE <span class="accent">IN.</span></h1>
+
+    <p>
+      Thanks for reaching out. A senior counsellor will call you within
+      <strong>one hour</strong> to map your path — course choice, fees,
+      EMI options, placement support, and batch dates.
+    </p>
+  </main>
+</body>
+</html>
